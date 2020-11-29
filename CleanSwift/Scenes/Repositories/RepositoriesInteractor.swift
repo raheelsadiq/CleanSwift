@@ -27,19 +27,19 @@ class RepositoriesInteractor: RepositoriesBusinessLogic, RepositoriesDataStore {
         worker.fetchRepos(request: request) { [weak self] (status) in
             switch status {
             case .success(let data):
-                var responses: [Repositories.Models.Response] = []
+                var response = Repositories.Models.Response()
                 if let jsons = data as? [[String: Any]] {
                     for json in jsons {
                         do {
-                            let resonse = try Repositories.Models.Response.init(from: json)
-                            responses.append(resonse)
+                            let repo = try Repositories.Models.Response.Repo.init(from: json)
+                            response.repos.append(repo)
                         }catch{
                             
                         }
                     }
                 }
                 
-                self?.presenter?.presentRepos(response: responses)
+                self?.presenter?.present(response: response)
                 
             case .failure(_):
                 self?.presenter?.presentFailure()

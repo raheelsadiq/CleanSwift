@@ -72,11 +72,11 @@ class RepositoriesViewControllerTests: XCTestCase
   func testDisplayRepos()
   {
     // Given
-    let viewModel = Repositories.Models.ViewModel()
+    let viewModels: [Repositories.Models.ViewModel] = []
     
     // When
     loadView()
-    sut.displayRepos(viewModel: viewModel)
+    sut.displayRepos(viewModels: viewModels)
     
     // Then
     //XCTAssertEqual(sut.nameTextField.text, "", "displayRepos(viewModel:) should update the name text field")

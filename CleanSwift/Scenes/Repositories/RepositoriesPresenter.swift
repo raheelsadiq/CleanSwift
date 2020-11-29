@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RepositoriesPresentationLogic {
-    func presentRepos(response: [Repositories.Models.Response])
+    func present(response: Repositories.Models.Response)
     func presentFailure()
 }
 
@@ -17,12 +17,18 @@ class RepositoriesPresenter: RepositoriesPresentationLogic {
     
     // MARK: Present
     
-    func presentRepos(response: [Repositories.Models.Response]) {
+    func present(response: Repositories.Models.Response) {
+        var viewModels: [Repositories.Models.ViewModel] = []
         
+        for repo in response.repos {
+            viewModels.append(.init(repo: repo))
+        }
+        
+        viewController?.displayRepos(viewModels: viewModels)
     }
     
     func presentFailure() {
-        
+        viewController?.displayFailure()
     }
     
 }

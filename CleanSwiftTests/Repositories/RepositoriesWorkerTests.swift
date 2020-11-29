@@ -43,7 +43,7 @@ class RepositoriesWorkerTests: XCTestCase
             executeCalled = true
             completion(.success(nil))
         }
-    }    
+    }
     
     // MARK: Tests
     

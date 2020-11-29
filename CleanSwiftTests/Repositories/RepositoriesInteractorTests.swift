@@ -36,7 +36,7 @@ class RepositoriesInteractorTests: XCTestCase {
         
         var presentReposCalled = false
         
-        func presentRepos(response: [Repositories.Models.Response]) {
+        func present(response: Repositories.Models.Response) {
             presentReposCalled = true
         }
         

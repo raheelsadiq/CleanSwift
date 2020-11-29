@@ -8,7 +8,8 @@
 import UIKit
 
 protocol RepositoriesDisplayLogic: class {
-    func displayRepos(viewModel: Repositories.Models.ViewModel)
+    func displayRepos(viewModels: [Repositories.Models.ViewModel])
+    func displayFailure()
 }
 
 class RepositoriesViewController: UIViewController, RepositoriesDisplayLogic {
@@ -74,10 +75,13 @@ class RepositoriesViewController: UIViewController, RepositoriesDisplayLogic {
     
     // MARK: - Display
     
-    func displayRepos(viewModel: Repositories.Models.ViewModel) {
+    func displayRepos(viewModels: [Repositories.Models.ViewModel]) {
         
     }
     
+    func displayFailure() {
+        
+    }
 }
 
 extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate {
