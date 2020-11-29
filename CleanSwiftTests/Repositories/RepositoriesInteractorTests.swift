@@ -33,9 +33,21 @@ class RepositoriesInteractorTests: XCTestCase {
     // MARK: Test doubles
     
     class RepositoriesPresentationLogicSpy: RepositoriesPresentationLogic {
+        
         var presentReposCalled = false
+        
         func presentRepos(response: [Repositories.Models.Response]) {
             presentReposCalled = true
+        }
+        
+        func presentFailure() {
+            presentReposCalled = false
+        }
+    }
+    
+    class RepositoriesWorkerSpy: RepositoriesWorker {
+        override func fetchRepos(request: Repositories.Models.Request, completion: @escaping ((APIManager.Status) -> Void)) {
+            completion(.success(nil))
         }
     }
     
@@ -43,14 +55,17 @@ class RepositoriesInteractorTests: XCTestCase {
     
     func testFetchRepos() {
         // Given
-        let spy = RepositoriesPresentationLogicSpy()
-        sut.presenter = spy
-        let request = Repositories.Models.Request()
+        let presenterSpy = RepositoriesPresentationLogicSpy()
+        sut.presenter = presenterSpy
+        let workerSpy = RepositoriesWorkerSpy()
+        sut.worker = workerSpy
+        
         
         // When
+        let request = Repositories.Models.Request()
         sut.fetchRepos(request: request)
         
         // Then
-        XCTAssertTrue(spy.presentReposCalled, "Interactor Request is working")
+        XCTAssertTrue(presenterSpy.presentReposCalled, "Interactor Request is working")
     }
 }

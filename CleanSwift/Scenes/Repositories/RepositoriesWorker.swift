@@ -9,13 +9,17 @@ import UIKit
 
 class RepositoriesWorker {
     
+    var apiManager = APIManager(service: AlamoreFireAPIService())
+
     func fetchRepos(
         request: Repositories.Models.Request,
-        success: @escaping ((_ repos: [Repositories.Models.Response]) -> Void),
-        failure: @escaping (() -> Void)
+        completion: @escaping ((_ status: APIManager.Status) -> Void)
     ){
+            
+        let apiRequest = APIManager.Request(url: .fetchRepositories, methodType: .get, params: nil)
         
-        success([])
-        
+        apiManager.execute(request: apiRequest) { (status) in
+            completion(status)
+        }
     }
 }

@@ -16,10 +16,19 @@ enum Repositories
         struct Request {
         }
         
-        struct Response {
+        struct Response: Codable {
+            
+            let author: String?
+            let name: String
+            let avatar: String
+            let language: String
+            let description: String
+            let stars: Int
+            
         }
         
         struct ViewModel {
+            
         }
     }
 }

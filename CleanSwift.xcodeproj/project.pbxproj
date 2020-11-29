@@ -25,6 +25,8 @@
 		9FF0963B2573B4A000437DB9 /* RepositoriesWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096372573B4A000437DB9 /* RepositoriesWorkerTests.swift */; };
 		9FF0963C2573B4A000437DB9 /* RepositoriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096382573B4A000437DB9 /* RepositoriesPresenterTests.swift */; };
 		9FF096482573BA7C00437DB9 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096472573BA7C00437DB9 /* RepositoryTableViewCell.swift */; };
+		9FF096572573C4C300437DB9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096562573C4C300437DB9 /* APIManager.swift */; };
+		9FF0965F2573C65900437DB9 /* AlamoreFireAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0965E2573C65900437DB9 /* AlamoreFireAPIService.swift */; };
 		B9AE7B7892A7D01DE28CCD00 /* Pods_CleanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD9A3B920CA92AC030138D3 /* Pods_CleanSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		9FF096372573B4A000437DB9 /* RepositoriesWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesWorkerTests.swift; sourceTree = "<group>"; };
 		9FF096382573B4A000437DB9 /* RepositoriesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresenterTests.swift; sourceTree = "<group>"; };
 		9FF096472573BA7C00437DB9 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		9FF096562573C4C300437DB9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9FF0965E2573C65900437DB9 /* AlamoreFireAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoreFireAPIService.swift; sourceTree = "<group>"; };
 		E1C2129730B1D87E1C051102 /* Pods-CleanSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwift.debug.xcconfig"; path = "Target Support Files/Pods-CleanSwift/Pods-CleanSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +173,7 @@
 		9F37F8712573A2F800107D2F /* CleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				9FF096552573C4AC00437DB9 /* Managers */,
 				9F330C652573A36600F50762 /* Extensions */,
 				9F330C642573A35400F50762 /* Scenes */,
 				9F330C5F2573A34300F50762 /* AppDelegates */,
@@ -228,6 +233,15 @@
 				9FF096472573BA7C00437DB9 /* RepositoryTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		9FF096552573C4AC00437DB9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9FF096562573C4C300437DB9 /* APIManager.swift */,
+				9FF0965E2573C65900437DB9 /* AlamoreFireAPIService.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		DC1900D4F1C7D31420854E64 /* Frameworks */ = {
@@ -416,6 +430,8 @@
 				9F37F8732573A2F800107D2F /* AppDelegate.swift in Sources */,
 				9FF0962A2573B48300437DB9 /* RepositoriesRouter.swift in Sources */,
 				9FF096482573BA7C00437DB9 /* RepositoryTableViewCell.swift in Sources */,
+				9FF0965F2573C65900437DB9 /* AlamoreFireAPIService.swift in Sources */,
+				9FF096572573C4C300437DB9 /* APIManager.swift in Sources */,
 				9FF0962B2573B48300437DB9 /* RepositoriesModels.swift in Sources */,
 				9FF0962C2573B48300437DB9 /* RepositoriesViewController.swift in Sources */,
 				9FF096292573B48300437DB9 /* RepositoriesWorker.swift in Sources */,

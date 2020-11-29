@@ -9,6 +9,7 @@ import UIKit
 
 protocol RepositoriesPresentationLogic {
     func presentRepos(response: [Repositories.Models.Response])
+    func presentFailure()
 }
 
 class RepositoriesPresenter: RepositoriesPresentationLogic {
@@ -17,6 +18,10 @@ class RepositoriesPresenter: RepositoriesPresentationLogic {
     // MARK: Present
     
     func presentRepos(response: [Repositories.Models.Response]) {
+        
+    }
+    
+    func presentFailure() {
         
     }
     
