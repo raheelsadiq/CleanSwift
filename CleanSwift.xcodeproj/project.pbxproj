@@ -27,6 +27,7 @@
 		9FF096482573BA7C00437DB9 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096472573BA7C00437DB9 /* RepositoryTableViewCell.swift */; };
 		9FF096572573C4C300437DB9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096562573C4C300437DB9 /* APIManager.swift */; };
 		9FF0965F2573C65900437DB9 /* AlamoreFireAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0965E2573C65900437DB9 /* AlamoreFireAPIService.swift */; };
+		9FF0966A2574451A00437DB9 /* RepositoriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096692574451A00437DB9 /* RepositoriesStore.swift */; };
 		B9AE7B7892A7D01DE28CCD00 /* Pods_CleanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD9A3B920CA92AC030138D3 /* Pods_CleanSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		9FF096472573BA7C00437DB9 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		9FF096562573C4C300437DB9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9FF0965E2573C65900437DB9 /* AlamoreFireAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoreFireAPIService.swift; sourceTree = "<group>"; };
+		9FF096692574451A00437DB9 /* RepositoriesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesStore.swift; sourceTree = "<group>"; };
 		E1C2129730B1D87E1C051102 /* Pods-CleanSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwift.debug.xcconfig"; path = "Target Support Files/Pods-CleanSwift/Pods-CleanSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +225,7 @@
 				9FF096362573B4A000437DB9 /* RepositoriesInteractorTests.swift */,
 				9FF096372573B4A000437DB9 /* RepositoriesWorkerTests.swift */,
 				9FF096382573B4A000437DB9 /* RepositoriesPresenterTests.swift */,
+				9FF096692574451A00437DB9 /* RepositoriesStore.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FF0963C2573B4A000437DB9 /* RepositoriesPresenterTests.swift in Sources */,
+				9FF0966A2574451A00437DB9 /* RepositoriesStore.swift in Sources */,
 				9FF0963B2573B4A000437DB9 /* RepositoriesWorkerTests.swift in Sources */,
 				9FF0963A2573B4A000437DB9 /* RepositoriesInteractorTests.swift in Sources */,
 				9FF096392573B4A000437DB9 /* RepositoriesViewControllerTests.swift in Sources */,

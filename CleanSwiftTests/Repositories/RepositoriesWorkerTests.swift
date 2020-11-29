@@ -58,6 +58,6 @@ class RepositoriesWorkerTests: XCTestCase
         }
         
         // Then
-        XCTAssertTrue(apiServiceSpy.executeCalled, "Request is made")
+        XCTAssertTrue(apiServiceSpy.executeCalled, "Request not made")
     }
 }

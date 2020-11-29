@@ -61,7 +61,7 @@ class RepositoriesPresenterTests: XCTestCase
         sut.present(response: response)
         
         // Then
-        XCTAssertTrue(spy.displayReposCalled, "Display called")
+        XCTAssertTrue(spy.displayReposCalled, "Display not called")
     }
     
     func testViewModelsData() {
@@ -69,23 +69,10 @@ class RepositoriesPresenterTests: XCTestCase
         let spy = RepositoriesDisplayLogicSpy()
         sut.viewController = spy
         
-        let repo = Repositories.Models.Response.Repo(
-            author: "John",
-            name: "CleanSwift",
-            avatar: "https://avatars0.githubusercontent.com/u/1942602?s=460&u=84ab5e4c9f95a25fd73d30b7f6d3df32aef4ceaa&v=4",
-            language: "swift",
-            description: "Clean Swift",
-            stars: 5)
-        
+        let repo = RepositoriesStore.sampleRepo
         
         // Expected view model of the example repo above
-        let expectedViewModel = Repositories.Models.ViewModel(
-            author: "John",
-            name: "CleanSwift",
-            avatar: URL(string:"https://avatars0.githubusercontent.com/u/1942602?s=460&u=84ab5e4c9f95a25fd73d30b7f6d3df32aef4ceaa&v=4"),
-            language: "Swift",
-            description: "Clean Swift",
-            stars: "5")
+        let expectedViewModel = RepositoriesStore.sampleViewModel
         
         let response = Repositories.Models.Response(repos: [repo])
         // When
@@ -94,13 +81,13 @@ class RepositoriesPresenterTests: XCTestCase
         // Then
         // Confirm the view models formatting
         let viewModel = spy.viewModels.first!
-        XCTAssertTrue(spy.displayReposCalled, "Display called")
-        XCTAssertEqual(viewModel.name, expectedViewModel.name, "Name matched")
-        XCTAssertEqual(viewModel.author, expectedViewModel.author, "Author matched")
-        XCTAssertEqual(viewModel.description, expectedViewModel.description, "Description matched")
-        XCTAssertEqual(viewModel.avatar, expectedViewModel.avatar, "Avatar matched")
-        XCTAssertEqual(viewModel.language, expectedViewModel.language, "Language matched")
-        XCTAssertEqual(viewModel.stars, expectedViewModel.stars, "Stars matched")
+        XCTAssertTrue(spy.displayReposCalled)
+        XCTAssertEqual(viewModel.name, expectedViewModel.name)
+        XCTAssertEqual(viewModel.author, expectedViewModel.author)
+        XCTAssertEqual(viewModel.description, expectedViewModel.description)
+        XCTAssertEqual(viewModel.avatar, expectedViewModel.avatar)
+        XCTAssertEqual(viewModel.language, expectedViewModel.language)
+        XCTAssertEqual(viewModel.stars, expectedViewModel.stars)
     }
     
     func testDisplayFailure() {
@@ -111,7 +98,6 @@ class RepositoriesPresenterTests: XCTestCase
         sut.presentFailure()
         
         // Then
-        XCTAssertTrue(spy.displayFailureCalled, "Display Failure called")
-        
+        XCTAssertTrue(spy.displayFailureCalled, "Display Failure not called")
     }
 }

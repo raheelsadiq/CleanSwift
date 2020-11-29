@@ -15,7 +15,11 @@ protocol RepositoriesDisplayLogic: class {
 class RepositoriesViewController: UIViewController, RepositoriesDisplayLogic {
     
     //MAKR: - IBOutlets
-    var repos: [Repositories.Models.ViewModel] = []
+    var repos: [Repositories.Models.ViewModel] = [] {
+        didSet{
+            reposTableView.reloadData()
+        }
+    }
     @IBOutlet weak var reposTableView: UITableView!
     
     var interactor: RepositoriesBusinessLogic?
@@ -76,7 +80,7 @@ class RepositoriesViewController: UIViewController, RepositoriesDisplayLogic {
     // MARK: - Display
     
     func displayRepos(viewModels: [Repositories.Models.ViewModel]) {
-        
+        repos = viewModels
     }
     
     func displayFailure() {
@@ -92,6 +96,9 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell") as! RepositoryTableViewCell
+        
+        let viewModel = repos[indexPath.row]
+        cell.configureCellWith(viewModel: viewModel)
         
         return cell
     }

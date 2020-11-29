@@ -30,5 +30,4 @@ class RepositoriesPresenter: RepositoriesPresentationLogic {
     func presentFailure() {
         viewController?.displayFailure()
     }
-    
 }
