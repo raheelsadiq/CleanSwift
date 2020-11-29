@@ -39,7 +39,7 @@ class RepositoriesWorkerTests: XCTestCase
   
   // MARK: Tests
   
-  func testSomething()
+  func testFetchRepos()
   {
     // Given
     

@@ -34,15 +34,14 @@ class RepositoriesInteractorTests: XCTestCase {
     
     class RepositoriesPresentationLogicSpy: RepositoriesPresentationLogic {
         var presentReposCalled = false
-        func presentRepos(response: Repositories.Models.Response) {
+        func presentRepos(response: [Repositories.Models.Response]) {
             presentReposCalled = true
         }
     }
     
     // MARK: Tests
     
-    func testDoSomething()
-    {
+    func testFetchRepos() {
         // Given
         let spy = RepositoriesPresentationLogicSpy()
         sut.presenter = spy

@@ -9,4 +9,13 @@ import UIKit
 
 class RepositoriesWorker {
     
+    func fetchRepos(
+        request: Repositories.Models.Request,
+        success: @escaping ((_ repos: [Repositories.Models.Response]) -> Void),
+        failure: @escaping (() -> Void)
+    ){
+        
+        success([])
+        
+    }
 }

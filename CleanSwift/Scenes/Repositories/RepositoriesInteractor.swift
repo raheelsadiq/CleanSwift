@@ -24,6 +24,11 @@ class RepositoriesInteractor: RepositoriesBusinessLogic, RepositoriesDataStore {
     
     func fetchRepos(request: Repositories.Models.Request) {
         
-        
+        let worker = RepositoriesWorker()
+        worker.fetchRepos(request: request, success: { [weak self] (repoResponses) in
+            self?.presenter?.presentRepos(response: repoResponses)
+        }, failure: {
+            
+        })
     }
 }
