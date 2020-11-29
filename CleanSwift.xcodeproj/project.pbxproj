@@ -14,6 +14,17 @@
 		9F37F87C2573A2FB00107D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F37F87B2573A2FB00107D2F /* Assets.xcassets */; };
 		9F37F87F2573A2FB00107D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F37F87D2573A2FB00107D2F /* LaunchScreen.storyboard */; };
 		9F37F8952573A2FB00107D2F /* CleanSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37F8942573A2FB00107D2F /* CleanSwiftUITests.swift */; };
+		9FF096282573B48300437DB9 /* RepositoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096222573B48300437DB9 /* RepositoriesPresenter.swift */; };
+		9FF096292573B48300437DB9 /* RepositoriesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096232573B48300437DB9 /* RepositoriesWorker.swift */; };
+		9FF0962A2573B48300437DB9 /* RepositoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096242573B48300437DB9 /* RepositoriesRouter.swift */; };
+		9FF0962B2573B48300437DB9 /* RepositoriesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096252573B48300437DB9 /* RepositoriesModels.swift */; };
+		9FF0962C2573B48300437DB9 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096262573B48300437DB9 /* RepositoriesViewController.swift */; };
+		9FF0962D2573B48300437DB9 /* RepositoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096272573B48300437DB9 /* RepositoriesInteractor.swift */; };
+		9FF096392573B4A000437DB9 /* RepositoriesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096352573B4A000437DB9 /* RepositoriesViewControllerTests.swift */; };
+		9FF0963A2573B4A000437DB9 /* RepositoriesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096362573B4A000437DB9 /* RepositoriesInteractorTests.swift */; };
+		9FF0963B2573B4A000437DB9 /* RepositoriesWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096372573B4A000437DB9 /* RepositoriesWorkerTests.swift */; };
+		9FF0963C2573B4A000437DB9 /* RepositoriesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096382573B4A000437DB9 /* RepositoriesPresenterTests.swift */; };
+		9FF096482573BA7C00437DB9 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF096472573BA7C00437DB9 /* RepositoryTableViewCell.swift */; };
 		B9AE7B7892A7D01DE28CCD00 /* Pods_CleanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD9A3B920CA92AC030138D3 /* Pods_CleanSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +61,17 @@
 		9F37F8902573A2FB00107D2F /* CleanSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F37F8942573A2FB00107D2F /* CleanSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftUITests.swift; sourceTree = "<group>"; };
 		9F37F8962573A2FB00107D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FF096222573B48300437DB9 /* RepositoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresenter.swift; sourceTree = "<group>"; };
+		9FF096232573B48300437DB9 /* RepositoriesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesWorker.swift; sourceTree = "<group>"; };
+		9FF096242573B48300437DB9 /* RepositoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRouter.swift; sourceTree = "<group>"; };
+		9FF096252573B48300437DB9 /* RepositoriesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModels.swift; sourceTree = "<group>"; };
+		9FF096262573B48300437DB9 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		9FF096272573B48300437DB9 /* RepositoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesInteractor.swift; sourceTree = "<group>"; };
+		9FF096352573B4A000437DB9 /* RepositoriesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewControllerTests.swift; sourceTree = "<group>"; };
+		9FF096362573B4A000437DB9 /* RepositoriesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesInteractorTests.swift; sourceTree = "<group>"; };
+		9FF096372573B4A000437DB9 /* RepositoriesWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesWorkerTests.swift; sourceTree = "<group>"; };
+		9FF096382573B4A000437DB9 /* RepositoriesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresenterTests.swift; sourceTree = "<group>"; };
+		9FF096472573BA7C00437DB9 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		E1C2129730B1D87E1C051102 /* Pods-CleanSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwift.debug.xcconfig"; path = "Target Support Files/Pods-CleanSwift/Pods-CleanSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +122,7 @@
 		9F330C632573A34D00F50762 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F37F87D2573A2FB00107D2F /* LaunchScreen.storyboard */,
 				9F37F8782573A2F800107D2F /* Main.storyboard */,
 			);
 			path = Views;
@@ -108,6 +131,7 @@
 		9F330C642573A35400F50762 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9FF096212573B47100437DB9 /* Repositories */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -150,7 +174,6 @@
 				9F330C5F2573A34300F50762 /* AppDelegates */,
 				9F330C632573A34D00F50762 /* Views */,
 				9F37F87B2573A2FB00107D2F /* Assets.xcassets */,
-				9F37F87D2573A2FB00107D2F /* LaunchScreen.storyboard */,
 				9F37F8802573A2FB00107D2F /* Info.plist */,
 			);
 			path = CleanSwift;
@@ -160,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				9F37F88B2573A2FB00107D2F /* Info.plist */,
+				9FF096342573B49300437DB9 /* Repositories */,
 			);
 			path = CleanSwiftTests;
 			sourceTree = "<group>";
@@ -171,6 +195,39 @@
 				9F37F8962573A2FB00107D2F /* Info.plist */,
 			);
 			path = CleanSwiftUITests;
+			sourceTree = "<group>";
+		};
+		9FF096212573B47100437DB9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9FF096222573B48300437DB9 /* RepositoriesPresenter.swift */,
+				9FF096232573B48300437DB9 /* RepositoriesWorker.swift */,
+				9FF096242573B48300437DB9 /* RepositoriesRouter.swift */,
+				9FF096252573B48300437DB9 /* RepositoriesModels.swift */,
+				9FF096262573B48300437DB9 /* RepositoriesViewController.swift */,
+				9FF096272573B48300437DB9 /* RepositoriesInteractor.swift */,
+				9FF096462573BA5300437DB9 /* Cells */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		9FF096342573B49300437DB9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9FF096352573B4A000437DB9 /* RepositoriesViewControllerTests.swift */,
+				9FF096362573B4A000437DB9 /* RepositoriesInteractorTests.swift */,
+				9FF096372573B4A000437DB9 /* RepositoriesWorkerTests.swift */,
+				9FF096382573B4A000437DB9 /* RepositoriesPresenterTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		9FF096462573BA5300437DB9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9FF096472573BA7C00437DB9 /* RepositoryTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		DC1900D4F1C7D31420854E64 /* Frameworks */ = {
@@ -357,6 +414,13 @@
 			files = (
 				9F330C672573A37A00F50762 /* UIViewExtension.swift in Sources */,
 				9F37F8732573A2F800107D2F /* AppDelegate.swift in Sources */,
+				9FF0962A2573B48300437DB9 /* RepositoriesRouter.swift in Sources */,
+				9FF096482573BA7C00437DB9 /* RepositoryTableViewCell.swift in Sources */,
+				9FF0962B2573B48300437DB9 /* RepositoriesModels.swift in Sources */,
+				9FF0962C2573B48300437DB9 /* RepositoriesViewController.swift in Sources */,
+				9FF096292573B48300437DB9 /* RepositoriesWorker.swift in Sources */,
+				9FF0962D2573B48300437DB9 /* RepositoriesInteractor.swift in Sources */,
+				9FF096282573B48300437DB9 /* RepositoriesPresenter.swift in Sources */,
 				9F37F8752573A2F800107D2F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +429,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF0963C2573B4A000437DB9 /* RepositoriesPresenterTests.swift in Sources */,
+				9FF0963B2573B4A000437DB9 /* RepositoriesWorkerTests.swift in Sources */,
+				9FF0963A2573B4A000437DB9 /* RepositoriesInteractorTests.swift in Sources */,
+				9FF096392573B4A000437DB9 /* RepositoriesViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
