@@ -61,7 +61,7 @@ class RepositoriesViewControllerTests: XCTestCase
     
     // MARK: Tests
     
-    func testShouldDoReposWhenViewIsLoaded() {
+    func testShouldFechReposWhenViewIsLoaded() {
         // Given
         let spy = RepositoriesBusinessLogicSpy()
         sut.interactor = spy
@@ -72,7 +72,7 @@ class RepositoriesViewControllerTests: XCTestCase
         // Then
         XCTAssertTrue(spy.fetchReposCalled, "viewDidLoad() should ask the interactor to fetch Repos")
     }
-    
+
     func testDisplayRepos() {
         // Given
         let viewModels: [Repositories.Models.ViewModel] = []

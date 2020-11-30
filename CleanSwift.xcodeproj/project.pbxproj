@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2880A02574B52F0061BE0C /* ShimmeringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28809F2574B52F0061BE0C /* ShimmeringViewController.swift */; };
 		9F330C672573A37A00F50762 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F330C662573A37A00F50762 /* UIViewExtension.swift */; };
 		9F37F8732573A2F800107D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37F8722573A2F800107D2F /* AppDelegate.swift */; };
 		9F37F8752573A2F800107D2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37F8742573A2F800107D2F /* SceneDelegate.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		5324FA8DC4A0876BD0B9DB78 /* Pods-CleanSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSwift.release.xcconfig"; path = "Target Support Files/Pods-CleanSwift/Pods-CleanSwift.release.xcconfig"; sourceTree = "<group>"; };
 		5CD9A3B920CA92AC030138D3 /* Pods_CleanSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F28809F2574B52F0061BE0C /* ShimmeringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringViewController.swift; sourceTree = "<group>"; };
 		9F330C662573A37A00F50762 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9F37F86F2573A2F800107D2F /* CleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F37F8722573A2F800107D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		9F330C642573A35400F50762 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9F53330A2574B2AA0041912C /* ShimmeringView */,
 				9FF096792574A78100437DB9 /* Retry */,
 				9FF096212573B47100437DB9 /* Repositories */,
 			);
@@ -211,6 +214,14 @@
 				9F37F8962573A2FB00107D2F /* Info.plist */,
 			);
 			path = CleanSwiftUITests;
+			sourceTree = "<group>";
+		};
+		9F53330A2574B2AA0041912C /* ShimmeringView */ = {
+			isa = PBXGroup;
+			children = (
+				9F28809F2574B52F0061BE0C /* ShimmeringViewController.swift */,
+			);
+			path = ShimmeringView;
 			sourceTree = "<group>";
 		};
 		9FF096212573B47100437DB9 /* Repositories */ = {
@@ -466,6 +477,7 @@
 				9FF096292573B48300437DB9 /* RepositoriesWorker.swift in Sources */,
 				9FF0962D2573B48300437DB9 /* RepositoriesInteractor.swift in Sources */,
 				9FF096282573B48300437DB9 /* RepositoriesPresenter.swift in Sources */,
+				9F2880A02574B52F0061BE0C /* ShimmeringViewController.swift in Sources */,
 				9F37F8752573A2F800107D2F /* SceneDelegate.swift in Sources */,
 				9FF0967B2574A79200437DB9 /* RetryViewController.swift in Sources */,
 			);

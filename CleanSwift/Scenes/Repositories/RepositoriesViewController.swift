@@ -80,6 +80,7 @@ class RepositoriesViewController: UIViewController, RepositoriesDisplayLogic {
     // MARK: - Request
     
     func fetchRepos() {
+        view.showShimmeringView()
         let request = Repositories.Models.Request()
         interactor?.fetchRepos(request: request)
     }
@@ -87,10 +88,12 @@ class RepositoriesViewController: UIViewController, RepositoriesDisplayLogic {
     // MARK: - Display
     
     func displayRepos(viewModels: [Repositories.Models.ViewModel]) {
+        view.hideshimmeringView()
         repos = viewModels
     }
     
     func displayFailure() {
+        view.hideshimmeringView()
         self.view.showRetryView(retry: { [weak self]  in
             self?.view.hideRetryView()
             self?.fetchRepos()
