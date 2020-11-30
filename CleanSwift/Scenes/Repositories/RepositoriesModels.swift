@@ -36,6 +36,7 @@ enum Repositories
             let language: String
             let description: String
             let stars: String
+            var isExpanded = false
             
             init(repo: Response.Repo) {
                 author = repo.author

@@ -20,7 +20,14 @@ class RepositoriesViewController: UIViewController, RepositoriesDisplayLogic {
             reposTableView.reloadData()
         }
     }
-    @IBOutlet weak var reposTableView: UITableView!
+    
+    @IBOutlet weak var reposTableView: UITableView!{
+        didSet{
+            reposTableView.separatorInset = .init(top: 0, left: 8, bottom: 0, right: 8)
+            reposTableView.rowHeight = UITableView.automaticDimension
+            reposTableView.estimatedRowHeight = 130
+        }
+    }
     
     var interactor: RepositoriesBusinessLogic?
     var router: (NSObjectProtocol & RepositoriesRoutingLogic & RepositoriesDataPassing)?
@@ -84,7 +91,10 @@ class RepositoriesViewController: UIViewController, RepositoriesDisplayLogic {
     }
     
     func displayFailure() {
-        
+        self.view.showRetryView(retry: { [weak self]  in
+            self?.view.hideRetryView()
+            self?.fetchRepos()
+        })
     }
 }
 
@@ -95,11 +105,15 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell") as! RepositoryTableViewCell
-        
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell", for: indexPath) as! RepositoryTableViewCell
         let viewModel = repos[indexPath.row]
         cell.configureCellWith(viewModel: viewModel)
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        repos[indexPath.row].isExpanded = !repos[indexPath.row].isExpanded
+        tableView.reloadData()
     }
 }
